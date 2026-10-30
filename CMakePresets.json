@@ -1,0 +1,27 @@
+{
+  "version": 6,
+  "configurePresets": [
+    {
+      "name": "base",
+      "hidden": true,
+      "generator": "Visual Studio 17 2022",
+      "architecture": "x64",
+      "binaryDir": "${sourceDir}/build/${presetName}",
+      "cacheVariables": {
+        "CMAKE_TOOLCHAIN_FILE": "D:/vcpkg/scripts/buildsystems/vcpkg.cmake",
+        "VCPKG_TARGET_TRIPLET": "x64-windows-static",
+        "VCPKG_MANIFEST_MODE": "OFF"
+      }
+    },
+    { "name": "cpu",    "inherits": "base", "cacheVariables": { "USE_CUDA": "OFF", "USE_VULKAN": "OFF" } },
+    { "name": "cuda",   "inherits": "base", "cacheVariables": { "USE_CUDA": "ON",  "USE_VULKAN": "OFF" } },
+    { "name": "vulkan", "inherits": "base", "cacheVariables": { "USE_CUDA": "OFF", "USE_VULKAN": "ON"  } },
+    { "name": "all",    "inherits": "base", "cacheVariables": { "USE_CUDA": "ON",  "USE_VULKAN": "ON"  } }
+  ],
+  "buildPresets": [
+    { "name": "cpu",    "configurePreset": "cpu",    "configuration": "Release" },
+    { "name": "cuda",   "configurePreset": "cuda",   "configuration": "Release" },
+    { "name": "vulkan", "configurePreset": "vulkan", "configuration": "Release" },
+    { "name": "all",    "configurePreset": "all",    "configuration": "Release" }
+  ]
+}

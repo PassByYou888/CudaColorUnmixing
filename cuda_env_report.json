@@ -1,0 +1,253 @@
+{
+  "Timestamp": "2026-10-30T16:31:14",
+  "Host": "HPC888",
+  "User": "Administrator",
+  "OS": "Microsoft Windows Server 2022 Datacenter",
+  "PowerShell": "7.6.6",
+  "Is64BitOS": true,
+  "CUDA": {
+    "NvccPath": "C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v12.6\\bin\\nvcc.exe",
+    "Release": "12.6",
+    "ToolkitVersion": "12.6.85",
+    "SupportedArchs": [
+      "50",
+      "52",
+      "53",
+      "60",
+      "61",
+      "62",
+      "70",
+      "72",
+      "75",
+      "80",
+      "86",
+      "87",
+      "89",
+      "90"
+    ]
+  },
+  "GPUs": [
+    {
+      "Index": 0,
+      "Name": "NVIDIA GeForce GTX TITAN X",
+      "Driver": "561.17",
+      "MemoryMB": 12288,
+      "ComputeCap": "5.2"
+    },
+    {
+      "Index": 1,
+      "Name": "Tesla P40",
+      "Driver": "561.17",
+      "MemoryMB": 23040,
+      "ComputeCap": "6.1"
+    }
+  ],
+  "VisualStudio": {
+    "InstallPath": "C:\\Program Files\\Microsoft Visual Studio\\2022\\Professional",
+    "MsvcVersion": "14.44.35207",
+    "ClPath": "C:\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\VC\\Tools\\MSVC\\14.44.35207\\bin\\Hostx64\\x64\\cl.exe",
+    "CudaProps": "CUDA 12.6.props"
+  },
+  "CMake": {
+    "Path": "C:\\Program Files\\CMake\\bin\\cmake.exe",
+    "Version": "3.31.2"
+  },
+  "RecommendedCudaArch": "61",
+  "Checks": [
+    {
+      "Category": "System",
+      "Name": "OS",
+      "Status": "OK",
+      "Detail": "Microsoft Windows Server 2022 Datacenter",
+      "Data": null
+    },
+    {
+      "Category": "System",
+      "Name": "PowerShell",
+      "Status": "OK",
+      "Detail": "7.6.6",
+      "Data": null
+    },
+    {
+      "Category": "System",
+      "Name": "64-bit OS",
+      "Status": "OK",
+      "Detail": "True",
+      "Data": null
+    },
+    {
+      "Category": "GPU",
+      "Name": "GPU #0",
+      "Status": "OK",
+      "Detail": "NVIDIA GeForce GTX TITAN X | Driver 561.17 | 12 GB | CC 5.2",
+      "Data": {
+        "Index": 0,
+        "Name": "NVIDIA GeForce GTX TITAN X",
+        "Driver": "561.17",
+        "MemoryMB": 12288,
+        "ComputeCap": "5.2"
+      }
+    },
+    {
+      "Category": "GPU",
+      "Name": "Driver for #0",
+      "Status": "OK",
+      "Detail": "561.17 >= 560",
+      "Data": null
+    },
+    {
+      "Category": "GPU",
+      "Name": "sm_52 < sm_60",
+      "Status": "FAIL",
+      "Detail": "不支持原生 double atomicAdd，bins 原子累加需 CAS 实现，性能与精度均受影响",
+      "Data": null
+    },
+    {
+      "Category": "GPU",
+      "Name": "GPU #1",
+      "Status": "OK",
+      "Detail": "Tesla P40 | Driver 561.17 | 22.5 GB | CC 6.1",
+      "Data": {
+        "Index": 1,
+        "Name": "Tesla P40",
+        "Driver": "561.17",
+        "MemoryMB": 23040,
+        "ComputeCap": "6.1"
+      }
+    },
+    {
+      "Category": "GPU",
+      "Name": "Driver for #1",
+      "Status": "OK",
+      "Detail": "561.17 >= 560",
+      "Data": null
+    },
+    {
+      "Category": "GPU",
+      "Name": "sm_61 >= sm_60",
+      "Status": "OK",
+      "Detail": "支持原生 double atomicAdd",
+      "Data": null
+    },
+    {
+      "Category": "CUDA",
+      "Name": "nvcc path",
+      "Status": "OK",
+      "Detail": "C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v12.6\\bin\\nvcc.exe",
+      "Data": null
+    },
+    {
+      "Category": "CUDA",
+      "Name": "Toolkit version",
+      "Status": "OK",
+      "Detail": "release 12.6 (12.6.85)",
+      "Data": null
+    },
+    {
+      "Category": "CUDA",
+      "Name": "Supported GPU archs",
+      "Status": "INFO",
+      "Detail": "50, 52, 53, 60, 61, 62, 70, 72, 75, 80, 86, 87, 89, 90",
+      "Data": null
+    },
+    {
+      "Category": "CUDA",
+      "Name": "CUDA_PATH",
+      "Status": "OK",
+      "Detail": "C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v12.6",
+      "Data": null
+    },
+    {
+      "Category": "VS",
+      "Name": "VS2022 path",
+      "Status": "OK",
+      "Detail": "C:\\Program Files\\Microsoft Visual Studio\\2022\\Professional",
+      "Data": null
+    },
+    {
+      "Category": "VS",
+      "Name": "Version 2022",
+      "Status": "OK",
+      "Detail": "C:\\Program Files\\Microsoft Visual Studio\\2022\\Professional",
+      "Data": null
+    },
+    {
+      "Category": "VS",
+      "Name": "MSVC toolset",
+      "Status": "OK",
+      "Detail": "14.44.35207 => C:\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\VC\\Tools\\MSVC\\14.44.35207\\bin\\Hostx64\\x64\\cl.exe",
+      "Data": null
+    },
+    {
+      "Category": "VS",
+      "Name": "CUDA Build Customizations",
+      "Status": "OK",
+      "Detail": "CUDA 12.6.props",
+      "Data": null
+    },
+    {
+      "Category": "CMake",
+      "Name": "cmake",
+      "Status": "OK",
+      "Detail": "3.31.2 (C:\\Program Files\\CMake\\bin\\cmake.exe)；CUDA 语言模式建议 >= 3.25",
+      "Data": null
+    },
+    {
+      "Category": "Tools",
+      "Name": "ninja",
+      "Status": "INFO",
+      "Detail": "未安装 (可选)",
+      "Data": null
+    },
+    {
+      "Category": "Tools",
+      "Name": "git",
+      "Status": "OK",
+      "Detail": "C:\\Program Files\\Git\\cmd\\git.exe",
+      "Data": null
+    },
+    {
+      "Category": "Libs",
+      "Name": "vcpkg",
+      "Status": "INFO",
+      "Detail": "未安装 (可选；推荐用于装 Eigen/NLopt)",
+      "Data": null
+    },
+    {
+      "Category": "Libs",
+      "Name": "Eigen",
+      "Status": "WARN",
+      "Detail": "未在常见路径找到 Eigen/Core。可用 vcpkg install eigen3:x64-windows",
+      "Data": null
+    },
+    {
+      "Category": "Libs",
+      "Name": "NLopt",
+      "Status": "WARN",
+      "Detail": "未在常见路径找到 nlopt.hpp。可用 vcpkg install nlopt:x64-windows",
+      "Data": null
+    },
+    {
+      "Category": "Libs",
+      "Name": "dlib (仅完整 zAI 需要)",
+      "Status": "INFO",
+      "Detail": "ColorUnmixing 复刻本身不需要 dlib；完整 zAI 库需要",
+      "Data": null
+    },
+    {
+      "Category": "CUDA",
+      "Name": "compile test (sm_75)",
+      "Status": "FAIL",
+      "Detail": "ExitCode=1; stderr: ",
+      "Data": null
+    }
+  ],
+  "Warnings": [
+    "[Libs] Eigen : 未在常见路径找到 Eigen/Core。可用 vcpkg install eigen3:x64-windows",
+    "[Libs] NLopt : 未在常见路径找到 nlopt.hpp。可用 vcpkg install nlopt:x64-windows"
+  ],
+  "Failures": [
+    "[GPU] sm_52 < sm_60 : 不支持原生 double atomicAdd，bins 原子累加需 CAS 实现，性能与精度均受影响",
+    "[CUDA] compile test (sm_75) : ExitCode=1; stderr: "
+  ]
+}
